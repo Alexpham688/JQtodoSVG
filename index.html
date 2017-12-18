@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>To Do List</h1>
+    </header>
+
+    <div class="undo">
+        Task Deleted
+      <div>
+        <span class="fa fa-undo"></span>
+          Undo
+      </div>
+    </div>
+    <div id="container">
+      <div class="main">
+        <div class="header">
+          <h1>Things to do <span>for a Tune-up</span></h1>
+        </div>
+        <ul id="sortable">
+          <li style="display:none">
+            <span class="priority-indicator"></span>
+            <div class="dragger">
+              <svg xmlns="http://w3.org/2000/svg" width="20" height="20"viewBox="0 0 20 20">
+                <circle cy="7"cx="9.5"r="1"fill="#000"></circle>
+                <circle cy="7"cx="14"r="1"fill="#000"></circle>
+                <circle cy="12.5"cx="9.5"r="1"fill="#000"></circle>
+                <circle cy="12.5"cx="14"r="1"fill="#000"></circle>
+                <circle cy="18"cx="9.5"r="1"fill="#000"></circle>
+                <circle cy="18"cx="14"r="1"fill="#000"></circle>
+              </svg>
+            </div>
+            <input type="checkbox"/>
+            <label>
+              <div class="checkbox"><span class="fa fa-check"></span>
+              </div>
+              <span class="item-name">change spark plugs</span>
+              <input type="text"/>
+            </label>
+            <div class="actions">
+              <span class="fa fa-dot-circle-o prio-btn"></span>
+              <span class="fa fa-pencil"></span>
+              <span class="fa fa-trash"></span>
+            </div>
+          </li>
+
+          <li class="checked">
+            <span class="priority-indicator"></span>
+            <div class="dragger">
+              <svg xmlns="http://w3.org/2000/svg" width="20" height="20"viewBox="0 0 20 20">
+                <circle cy="7"cx="9.5"r="1"fill="#000"></circle>
+                <circle cy="7"cx="14"r="1"fill="#000"></circle>
+                <circle cy="12.5"cx="9.5"r="1"fill="#000"></circle>
+                <circle cy="12.5"cx="14"r="1"fill="#000"></circle>
+                <circle cy="18"cx="9.5"r="1"fill="#000"></circle>
+                <circle cy="18"cx="14"r="1"fill="#000"></circle>
+              </svg>
+            </div>
+            <input type="checkbox" id="1" checked/>
+            <label for="1">
+              <div class="checkbox">
+                <span class="fa fa-check"></span>
+              </div>
+              <span class="item-name">change spark plugs
+              </span>
+              <input type="text"/>
+            </label>
+            <div class="actions">
+              <span class="fa fa-dot-circle-o prio-btn"></span>
+              <span class="fa fa-pencil"></span>
+              <span class="fa fa-trash"></span>
+            </div>
+          </li>
+
+          <li clas="priority priority2">
+            <span class="priority-indicator"></span>
+          <div class="dragger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20"height="20"viewBox="0 0 20 20">
+            <circle cy="7"cx="9.5"r="1"fill="#000"></circle>
+            <circle cy="7"cx="14.5"r="1"fill="#000"></circle>
+            <circle cy="12.5"cx="9"r="1"fill="#000"></circle>
+            <circle cy="12.5"cx="14.5"r="1"fill="#000"></circle>
+            <circle cy="18"cx="9"r="1"fill="#000"></circle>
+            <circle cy="18"cx="14.5"r="1"fill="#000"></circle>
+            </svg>
+          </div>
+          <input type="checkbox" id="2"/>
+          <label for="2">
+            <div class="checkbox">
+              <span class="fa fa-check"></span>
+            </div>
+            <span class="item-name">motor oil change</span>
+            <input type="text"/>
+            </label>
+            <div class="actions">
+              <span class="fa fa-dot-circle-o prio-btn"></span>
+              <span class="fa fa-pencil"></span>
+              <span class="fa fa-trash"></span>
+            </div>
+          </li>
+
+          <li class="priority priority1">
+            <span class="priority-indicator"></span>
+            <div class="dragger">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20"height="20"viewBox="0 0 20 20">
+              <circle cy="7"cx="9.5"r="1"fill="#000"></circle>
+              <circle cy="7"cx="14.5"r="1"fill="#000"></circle>
+              <circle cy="12.5"cx="9"r="1"fill="#000"></circle>
+              <circle cy="12.5"cx="14.5"r="1"fill="#000"></circle>
+              <circle cy="18"cx="9"r="1"fill="#000"></circle>
+              <circle cy="18"cx="14.5"r="1"fill="#000"></circle>
+              </svg>
+            </div>
+            <input type="checkbox" id="4"checked/>
+            <label for="4">
+              <div class="checkbox">
+                <span class="fa fa-check"></span>
+              </div>
+              <span class="item-name">brake pads</span>
+              <input type="text">
+            </label>
+            <div class="actions">
+              <span class="fa fa-dot-circle-o prio-btn"></span>
+              <span class="fa fa-pencil"></span>
+              <span class="fa fa-trash"></span>
+            </div>
+          </li>
+
+          <li>
+            <span class="priority-indicator"></span>
+            <div class="dragger">
+              <svg xmlns="http://www.w3.org/2000/svg"width="20"height="20"viewBox="0 0 20 20">
+              <circle cy="7"cx="9.5"r="1"fill="#000"></circle>
+              <circle cy="7"cx="14.5"r="1"fill="#000"></circle>
+              <circle cy="12.5"cx="9"r="1"fill="#000"></circle>
+              <circle cy="12.5"cx="14.5"r="1"fill="#000"></circle>
+              <circle cy="18"cx="9"r="1"fill="#000"></circle>
+              <circle cy="18"cx="14.5"r="1"fill="#000"></circle>
+              </svg>
+            </div>
+            <input type="checkbox" id="3"/>
+            <label for="3">
+              <div class="checkbox">
+                <span class="fa fa-check"></span>
+              </div>
+              <span class="item-name">transmission oil change</span>
+              <input type="text"/>
+            </label>
+            <div class="actions">
+              <span class="fa fa-dot-circle-o prio-btn"></span>
+              <span class="fa fa-pencil"></span>
+              <span class="fa fa-trash"></span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="add">
+          <div class="add-txt">
+            <div>
+              <span class="fa fa-plus"></span>
+            </div>
+            <span class="txt">Add new</span>
+            <input type="text"onfocus='this.value=""'/>
+          </div>
+        </div>
+        <!--main end-->
+      </div>
+      <!--container end-->
+    </div>
+
+    <footer>
+      <p>Copyright &copy; All rights reserved by AP.</p>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

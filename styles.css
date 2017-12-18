@@ -1,0 +1,389 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:600|Spectral+SC');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+body {
+  background: #ddd;
+  font-family: "raleway",sans-serif;
+}
+header {
+  background: #fff;
+  color: #000;
+  padding: 2px 0;
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.3em;
+  box-shadow: 0 5px 15px rgba(0,0,0, 0.7);
+  border-radius: 2px;
+}
+footer {
+  background: #fff;
+  color: #000;
+  width: 800px;
+  padding: 10px 0;
+  margin: 20px auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+  border-radius: 2px;
+}
+footer p {
+  margin-left: 40px;
+  font-family: 'Abel',sans-serif;
+  font-weight: 1000;
+}
+#container {
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+
+}
+.main {
+  background: #fff;
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 0 5px 15px  rgba(0,0,0,0.7);
+}
+
+.main .header {
+  width: 100%;
+  height: 200px;
+  background-image: url('img/engine.jpg');
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  background-size: cover;
+}
+.main .header h1 {
+  margin:10px auto;
+  color: #fff;
+  vertical-align: bottom;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 25px;
+  text-shadow: 0 1px 5px rgba(253,253,253,0.7);
+}
+.main .header h1 span {
+  font-size: 1.2em;
+  display: block;
+  font-weight: normal;
+  margin-top: 5px;
+  text-shadow: 0 3px 7px rgba(188,210,255,0.7);
+}
+/*items*/
+.main ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  padding-top: 5px;
+  position: relative;
+}
+.main ul li {
+  position: relative;
+  padding: 0 25px;
+}
+.main ul li .dragger {
+  position: absolute;
+  top: -1px;
+  left: -21px;
+  color: #ccc;
+  font-size: 11px;
+  display: none;
+  padding: 23px;
+  cursor: move;
+}
+.main ul li.dragger span:first-child {
+  position: relative;
+  left: 5px;
+}
+.main ul li:hover .dragger {
+  display: block;
+}
+.main div.add .add-txt div span {
+  color: #fff;
+  font-size: 1.1em;
+  position: relative;
+  top: 1px;
+}
+.main div.add .add-text span.txt {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: top;
+  position: relative;
+  top: 3px;
+}
+.main ul li.ui-sortable-helper {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  cursor: move;
+}
+.main ul li.ui-sortable-helper label {
+  border: none;
+}
+.main ul li.ui-sortable-helper .priority-indicator {
+  left: -7px;
+}
+.main ul li:nth-child(2) label {
+  border-top: 0;
+}
+.main ul li label {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+  border-top: 2px solid #555;
+}
+.main ul li label:hover .checkbox {
+  border-color: #555;
+}
+/*checked*/
+.main ul li input[type=checkbox]:checked + label span:before {
+  width: 100%;
+}
+.main ul li input[type=checkbox]:checked + label .checkbox, .main ul li input[type=checkbox]:focus + label .checkbox {
+  background: #222;
+  border-color: #ccc;
+}
+.main ul li input[type=checkbox]:checked + label {
+  color: #bbb;
+}
+.main ul li input[type=checkbox]:checked + .icon-pencil {
+  color: #00C412; /*green*/
+}
+.main ul li input[type=checkbox]:checked + label .checkbox .fa {
+  display: block;
+}
+.main ul li label .checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  position: relative;
+  top: 5px;
+  border-radius: 6px
+  cursor: pointer;
+  z-index: 999;
+}
+/*checkmark*/
+.main ul li label .checkbox .fa {
+  text-align: center;
+  position: absolute;
+  top: -7px;
+  left: -4px;
+  font-size: 2em;
+  display: none;
+  color: #00EE1C;
+}
+.main ul li label span.item-name {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: top;
+  position: relative;
+  top: 5px;
+}
+.main ul li label span.item-name:before {
+  content: "";
+  height: 1px;
+  background: #fc2000;
+  width: 0;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  -webkit-transition: .2s ease all;
+     -moz-transition: .2s ease all;
+          transition: .2s ease all;
+}
+/*new added item text*/
+.add input, .main ul li input[type=text] {
+  position: absolute;
+  border: none;
+  color: #000;
+  font-size: 1.0em;
+  background: #eee;
+  padding: 25px 0;
+  padding-left: 40px;
+  width: 0;
+  left: 0;
+  top: 1px;
+  display: none;
+  font-weight: bold;
+  font-family: "raleway",sans-serif;
+  border-bottom: 4px solid #34a1fd;
+  z-index: 10;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: width .8s ease;
+     -moz-transition: width .8s ease;
+          transition: width .8s ease;
+}
+.add input, .main ul li input[type=text]:focus {
+  outline: none;
+  width: 100%;
+  height: 99%;
+}
+.txt {
+  margin-left: 10px;
+}
+.main ul li input[type=checkbox] {
+  display: none;
+}
+.main ul .actions {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  overflow: hidden;
+  z-index: 10;
+}
+.main ul li:hover .actions {
+  display: block;
+}
+.main ul li:hover .actions span {
+  opacity: .8;
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: .2s ease all;
+     -moz-transition: .2s ease all;
+          transition: .2s ease all;
+}
+.main ul .actions span {
+  vertical-align: middle;
+  display: inline-block;
+  padding: 25px 6px;
+  cursor: pointer;
+  color: #000;
+  opacity: 0;
+  -webkit-transform: translateX(100px);
+     -moz-transform: translateX(100px);
+          transform: translateX(100px);
+}
+.main ul .actions span.fa-pencil:hover {
+  color: #34a1fd;/*light blue*/
+}
+.main ul .actions span.fa-trash:hover {
+  color: #ff0000; /*red*/
+}
+
+/*priority*/
+.main ul .actions span.prio-btn:hover, .main ul li.priority1
+.actions span.prio-btn {
+  color: #FAA400; /*orange*/
+}
+.main ul li.priority1 .priority-indicator {
+  background: #FAA400;
+}
+/*1*/
+.main ul li.priority1 .actions span.prio-btn {
+  color: #FAA400;
+}
+.main ul li.priority1 .priority-indicator {
+  background: #FAA400;
+}
+/*2* priiority 2*/
+.main ul li.priority2 .actions span.prio-btn {
+  color: #ff0000;
+}
+.main ul li.priority2 .priority-indicator {
+  background: #ff0000;
+}
+.priority-indicator {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 29px;
+  left: -5px;
+  display: none;
+  border-radius: 50%;
+  border: 2px solid teal;
+}
+.main ul li.priority .priority-indicator {
+  display: block;
+}
+.main ul li.checked .priority-indicator,
+.main ul li.checked .fa-pencil,
+.main ul li.checked .prio-btn {
+  display: none;
+}
+/*add new*/
+.main div.add {
+  padding: 0 20px;
+  cursor: pointer;
+  position: relative;
+}
+.main div.add .add-txt {
+  border-top: 2px solid #333;
+  padding: 22px 0 23px;
+  position: relative;
+}
+/*button*/
+.main div.add .add-txt div{
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: #34a1fd;
+  border: 2px solid #333;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+}
+.add input {
+  border-bottom: 0;
+}
+
+/*undo*/
+.undo {
+  left: 50%;
+  -webkit-transform: translate(-50%, 300px);
+     -moz-transform: translate(-50%, 300px);
+          transform: translate(-50%, 300px);
+  -webkit-transition: .2s ease all;
+     -moz-transition: .2s ease all;
+          transition: .2s ease all;
+  padding: 15px;
+  position: fixed;
+  bottom: 20px;
+  font-size: 1.1em;
+  background: #222;
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0, 0.7);
+  border-radius: 2px;
+  z-index: 100;
+}
+.undo.active {
+  -webkit-transform: translate(-50%, 0px);
+     -moz-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
+}
+.undo div {
+  display: inline-block;
+  margin-left: 10px;
+  border-left: 2px solid #fff;
+  padding-left: 10px;
+  color: #fff;
+  background: #222;
+}
+.undo div:hover {
+  color: #34a1fd;
+  cursor: pointer;
+}
+.undo span {
+  display: inline-block;
+  margin-right: 2px;
+}
+
+/*tooltip*/
+.ui-tooltip {
+  width: 200px;
+  color: #222;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0, 0.7);
+  padding: 0;
+}
+.ui-tooltip-content {
+  position: relative;
+  padding: .5em;
+}
